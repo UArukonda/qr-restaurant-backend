@@ -5,8 +5,9 @@ describe("Restaurants API", () => {
   describe("GET /restaurants", () => {
     test("GET /restaurants should return a list of restaurants", async () => {
       const res = await request(app).get("/restaurants");
+      console.log(res);
 
-      expect(res.body.msg).toBe("server error");
+      expect(res.statusCode).toBe(200);
     });
   });
 });
